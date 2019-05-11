@@ -5,10 +5,10 @@ import forestry.api.apiculture.BeeManager;
 import forestry.api.apiculture.EnumBeeType;
 import magicbees.MagicBees;
 import magicbees.api.ITransmutationHandler;
+import magicbees.api.module.IConfigRegistry;
 import magicbees.api.module.IMagicBeesInitialisationEvent;
 import magicbees.api.module.IMagicBeesModule;
 import magicbees.api.module.MagicBeesModule;
-import magicbees.api.module.IConfigRegistry;
 import magicbees.bees.BeeIntegrationInterface;
 import magicbees.bees.EnumBeeSpecies;
 import magicbees.bees.allele.AlleleEffectTransmuting;
@@ -91,7 +91,7 @@ public class IntegrationBotania implements IMagicBeesModule {
 		IBlockState livingWood = BeeIntegrationInterface.livingWood = event.getBlock("livingwood").getDefaultState();
 		livingRock = event.getBlock("livingrock");
 		dreamWood = event.getBlock("dreamwood");
-		Block mysticalFlower = event.getBlock("specialFlower");
+		Block mysticalFlower = event.getBlock("flower");
 		BeeIntegrationInterface.effectDreaming = new AlleleEffectTransmuting(BeeIntegrationInterface.bot_dreaming_name, new DefaultTransmutationController((ITransmutationHandler) (world, pos, block, biome) -> {
 
 			int[] oreIDs = OreDictionary.getOreIDs(block);

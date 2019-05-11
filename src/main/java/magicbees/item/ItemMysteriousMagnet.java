@@ -19,7 +19,6 @@ import net.minecraft.util.*;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.text.translation.I18n;
 import net.minecraft.world.World;
-import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -61,9 +60,9 @@ public class ItemMysteriousMagnet extends Item {
             if (isMagnetActive(itemStack) && entity instanceof EntityPlayer) {
                 EntityPlayer player = (EntityPlayer)entity;
                 float radius = getRadius(itemStack) - FUDGE_FACTOR;
-                AxisAlignedBB bounds = player.getEntityBoundingBox().expand(radius, radius, radius);
+                AxisAlignedBB bounds = player.getEntityBoundingBox().expand(radius, radius, radius).expand(-radius, -radius, -radius);
 
-                if (FMLCommonHandler.instance().getEffectiveSide() == Side.SERVER) {
+                if (!world.isRemote) {
                     bounds.expand(FUDGE_FACTOR, FUDGE_FACTOR, FUDGE_FACTOR);
 
                     if (7 <= getMagnetLevel(itemStack)) {
@@ -98,7 +97,7 @@ public class ItemMysteriousMagnet extends Item {
                         e.motionZ = z;
                         e.isAirBorne = true;
 
-                        if (e.isCollidedHorizontally) {
+                        if (e.collidedHorizontally) {
                             e.motionY += 1;
                         }
 

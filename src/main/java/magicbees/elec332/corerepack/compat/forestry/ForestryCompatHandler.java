@@ -1,19 +1,17 @@
 package magicbees.elec332.corerepack.compat.forestry;
 
-import net.minecraft.creativetab.CreativeTabs;
-
-import net.minecraftforge.fml.common.event.FMLInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-
 import forestry.api.apiculture.BeeManager;
 import forestry.api.apiculture.IBeeRoot;
 import forestry.api.core.ForestryAPI;
 import forestry.api.core.Tabs;
 import forestry.api.genetics.AlleleManager;
 import forestry.api.genetics.IAlleleSpecies;
-
 import magicbees.elec332.corerepack.compat.forestry.bee.ForestryBeeEffects;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 /**
  * Created by Elec332 on 14-8-2016.
@@ -33,7 +31,7 @@ public class ForestryCompatHandler  {
     }
 
     public void init(FMLInitializationEvent event){
-        if (ForestryAPI.enabledPlugins.contains("forestry.apiculture")) {
+        if (ForestryAPI.enabledModules.contains(new ResourceLocation("forestry", "apiculture"))) {
             ForestryAlleles.dummyLoad();
             ForestryBeeEffects.init();
             return; //Just to make sure
