@@ -23,7 +23,7 @@ public class MagicBeesCreativeTab extends CreativeTabs {
 
 	@Override
 	@Nonnull
-	public ItemStack getTabIconItem() {
+	public ItemStack createIcon() {
 		return new ItemStack(ItemRegister.magicFrame);
 	}
 

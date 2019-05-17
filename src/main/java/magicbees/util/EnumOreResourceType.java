@@ -122,7 +122,7 @@ public enum EnumOreResourceType {
 		for (EnumOreResourceType type : EnumOreResourceType.values()) {
 			if (type.oreDictA.length > 0) {
 				if (type.finalStack != null && !type.finalStack.isEmpty()) {
-					if (!(type.finalStack.getItem() == ItemRegister.ironNugget && ItemRegister.ironNugget.getRegistryName().getResourceDomain().equals("minecraft"))) {
+					if (!(type.finalStack.getItem() == ItemRegister.ironNugget && ItemRegister.ironNugget.getRegistryName().getNamespace().equals("minecraft"))) {
 						for (String s : type.oreDictA) {
 							if (s.startsWith("nugget")) {
 								OreDictionary.registerOre(s, type.finalStack);

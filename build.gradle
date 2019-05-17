@@ -100,7 +100,7 @@ dependencies {
     deobfCompile ("cofh:ThermalFoundation:${config.minecraft_version}-${config.thermal_foundation_version}:universal") {
         exclude group: 'mezz.jei', module: 'jei_1.12.2'
     }
-    deobfCompile "thaumcraft:Thaumcraft:1.12.2:6.1.BETA17"
+    deobfCompile "thaumcraft:Thaumcraft:1.12.2:6.1.BETA26"
 }
 
 processResources {

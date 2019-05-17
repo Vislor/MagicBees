@@ -52,8 +52,8 @@ public enum EnumResourceType implements IEnumItem {
     }
 
     @Override
-    public String getUnlocalizedName(ItemStack stack) {
-        return stack.getItem().getUnlocalizedName(null)+"."+name;
+    public String getTranslationKey(ItemStack stack) {
+        return stack.getItem().getTranslationKey(null)+"."+name;
     }
 
 }

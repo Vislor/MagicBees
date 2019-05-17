@@ -90,8 +90,8 @@ public class BlockEffectJar extends Block implements ITileEntityProvider {
     }
 
 	@Override
-	public BlockRenderLayer getBlockLayer() {
-		return super.getBlockLayer();
+	public BlockRenderLayer getRenderLayer() {
+		return super.getRenderLayer();
 	}
 
 	@Override

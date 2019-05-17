@@ -60,15 +60,15 @@ public class Utils {
 	}
 
 	public static void setUnlocalizedName(Item item){
-		item.setUnlocalizedName(getUnlocalizedName(item));
+		item.setTranslationKey(getTranslationKey(item));
 	}
 
 	public static void setUnlocalizedName(Block block){
-		block.setUnlocalizedName(getUnlocalizedName(block));
+		block.setTranslationKey(getTranslationKey(block));
 	}
 
 	@SuppressWarnings("all")
-	public static String getUnlocalizedName(IForgeRegistryEntry<?> object){
+	public static String getTranslationKey(IForgeRegistryEntry<?> object){
 		return object.getRegistryName().toString().replace(":", ".").toLowerCase();
 	}
 

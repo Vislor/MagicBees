@@ -32,7 +32,7 @@ public interface IBeeTemplate extends IIndividualTemplate<BeeGenomeTemplate, IAl
     @Nonnull
     @Override
     default public IAlleleBeeSpeciesBuilder getSpeciesBuilder(){
-        return BeeManager.beeFactory.createSpecies(MagicBees.modid, getUid(), isDominant(), getAuthority(), getUnlocalizedName(), getUnlocalizedDescription(), getIndividualBranch().getClassification(), getBinominalName(), getPrimaryColor(), getSecondaryColor());
+        return BeeManager.beeFactory.createSpecies(MagicBees.modid, getUid(), isDominant(), getAuthority(), getTranslationKey(), getUnlocalizedDescription(), getIndividualBranch().getClassification(), getBinominalName(), getPrimaryColor(), getSecondaryColor());
     }
 
 }

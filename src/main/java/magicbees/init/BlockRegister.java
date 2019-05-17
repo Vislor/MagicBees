@@ -55,8 +55,8 @@ public final class BlockRegister {
         event.getRegistry().registerAll(new ItemBlock(hiveBlock){
 
             @Override
-            public String getUnlocalizedName(ItemStack stack) {
-                return hiveBlock.getUnlocalizedName(stack);
+            public String getTranslationKey(ItemStack stack) {
+                return hiveBlock.getTranslationKey(stack);
             }
 
             @Override

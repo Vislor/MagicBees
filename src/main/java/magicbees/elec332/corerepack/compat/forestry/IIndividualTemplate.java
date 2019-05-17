@@ -21,11 +21,11 @@ public interface IIndividualTemplate<T extends IGenomeTemplate, B extends IAllel
     }
 
     @Nonnull
-    public String getUnlocalizedName();
+    public String getTranslationKey();
 
     @Nonnull
     default public String getUnlocalizedDescription(){
-        return getUnlocalizedName()+".description";
+        return getTranslationKey()+".description";
     }
 
     @Nonnull

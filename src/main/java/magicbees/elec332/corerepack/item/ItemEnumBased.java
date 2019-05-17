@@ -67,12 +67,12 @@ public class ItemEnumBased<E extends Enum<E> & IEnumItem> extends Item implement
 
     @Override
     @Nonnull
-    public String getUnlocalizedName(ItemStack stack) {
+    public String getTranslationKey(ItemStack stack) {
         E e = stack == null ? null : get(stack.getItemDamage());
         if (e == null){
-            return super.getUnlocalizedName(stack);
+            return super.getTranslationKey(stack);
         }
-        return e.getUnlocalizedName(stack);
+        return e.getTranslationKey(stack);
     }
 
     @Override

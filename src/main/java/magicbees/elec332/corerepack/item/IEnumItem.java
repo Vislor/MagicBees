@@ -33,8 +33,8 @@ public interface IEnumItem {
 
     public ResourceLocation getTextureLocation();
 
-    default public String getUnlocalizedName(ItemStack stack){
-        return stack.getItem().getUnlocalizedName(null)+"."+((Enum) this).name().toLowerCase();
+    default public String getTranslationKey(ItemStack stack){
+        return stack.getItem().getTranslationKey(null)+"."+((Enum) this).name().toLowerCase();
     }
 
 }

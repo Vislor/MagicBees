@@ -210,7 +210,8 @@ public enum EnumBeeBranches implements IMagicBeesBranch {
 
         @Override
         public boolean enabled() {
-            return Config.Bees.enableGemBees;
+            //return Config.Bees.enableGemBees;
+            return true;
         }
 
     },

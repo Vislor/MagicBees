@@ -1516,7 +1516,6 @@ public enum EnumBeeSpecies implements IBeeTemplate {
         }
 
         @Override
-        @SuppressWarnings("all") //localVar
         public void registerMutations() {
             EnumBeeSpecies beeA = CERTUS.isActive() ? CERTUS : (SILICON.isActive() ? SILICON : IRON);
             EnumBeeSpecies beeB = AE_SKYSTONE.isActive() ? AE_SKYSTONE : EARTHY;
@@ -2506,7 +2505,7 @@ public enum EnumBeeSpecies implements IBeeTemplate {
 
     @Nonnull
     @Override
-    public String getUnlocalizedName() {
+    public String getTranslationKey() {
         return unlocalisedName;
     }
 

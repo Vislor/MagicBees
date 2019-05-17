@@ -36,8 +36,8 @@ public class BlockHive extends magicbees.elec332.corerepack.compat.forestry.bee.
 	}
 
 	@Nonnull
-	public String getUnlocalizedName(ItemStack stack) {
-		return getUnlocalizedName() + "." + EnumBeeHives.values()[stack.getItemDamage()].getName();
+	public String getTranslationKey(ItemStack stack) {
+		return getTranslationKey() + "." + EnumBeeHives.values()[stack.getItemDamage()].getName();
 	}
 
 	@Override
